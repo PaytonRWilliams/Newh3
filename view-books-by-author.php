@@ -3,8 +3,9 @@
   <table class="table">
     <thead>
       <tr>
-           <th>Book ID</th>
-          <th>Author ID</th>
+           <th>ID</th>
+          <th>Title</th>
+          <th>Genre</th>
           <th>Position</th>
       </tr>
        
@@ -19,7 +20,8 @@ while ($book= $books->fetch_assoc()) {
 
     <td> <?php echo $book['book_id']; ?></td>
     
-    <td><?php echo $book['author_id']; ?></td>
+    <td><?php echo $book['book_title']; ?></td>
+    <td><?php echo $book['book_genre']; ?></td>
     <td><?php echo $book['position']; ?></td>
    
    
