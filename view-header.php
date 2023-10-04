@@ -28,6 +28,11 @@
         <li class="nav-item">
           <a class="nav-link" href="books.php">Books</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="publishers.php">Publishers</a>
+        </li>
+        
         <li class="nav-item">
           <a class="nav-link" href="authors-with-books.php">Authors with books </a>
         </li>
