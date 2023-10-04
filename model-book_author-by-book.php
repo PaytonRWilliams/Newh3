@@ -1,5 +1,5 @@
 <?php
-function selectBook_AuthorbyBook($baid) {
+function selectBook_AuthorByBook($baid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT  b.book_id, book_title, book_genre, position
