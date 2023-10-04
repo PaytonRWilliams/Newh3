@@ -7,7 +7,7 @@ require_once("model-publishers.php");
 
 $pageTitle="Publishers";
 include "view-header.php";
-$authors = selectPublishers();
+$publishers = selectPublishers();
 include "view-publishers.php";
 include "view-footer.php";
 ?>
