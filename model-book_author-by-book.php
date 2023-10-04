@@ -1,5 +1,5 @@
 <?php
-function selectPositionsByCourse($baid) {
+function selectBook_AuthorbyBook($baid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT  b.book_id, book_title, book_genre, position
