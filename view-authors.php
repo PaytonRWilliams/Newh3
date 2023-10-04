@@ -6,6 +6,7 @@
            <th>ID</th>
           <th>Name</th>
           <th>Gender</th>
+          <th></th>
       </tr>
        
 
@@ -21,7 +22,7 @@ while ($author= $authors->fetch_assoc()) {
     
     <td><?php echo $author['author_name']; ?></td>
     <td><?php echo $author['author_gender']; ?></td>
-   
+     <td><a href="books-by-author.php?id=">Books</a></td>
    
  </tr> 
 
