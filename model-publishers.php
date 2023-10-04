@@ -1,5 +1,5 @@
 <?php
-function selectAuthors() {
+function selectPublishers() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT publisher_id, publisher_name, publisher_city FROM `publisher` ");
