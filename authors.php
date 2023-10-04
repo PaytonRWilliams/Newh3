@@ -1,7 +1,7 @@
 <?php
 
 require_once("util-db.php");
-require_once("model-authors.php);
+require_once("model-authors.php");
 
 
 
