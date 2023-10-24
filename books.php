@@ -20,7 +20,7 @@ if (isset($_POST['actionType'])) {
   break;
 
  case "Delete":
-  if (deleteBook($_POST['bid'])) {
+  if (deleteBooks($_POST['bid'])) {
       echo '<div class="alert alert-success" role="alert">Book deleted.</div>';
   } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
