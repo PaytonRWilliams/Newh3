@@ -23,7 +23,7 @@ function insertAuthors($aName, $aGender) {
         $success = $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
@@ -49,45 +49,27 @@ function updateBooks($aName, $aGender) {
 
 
 
+function deleteBooks($aid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from author where author_id=?");
+        $stmt->bind_param("i", $aid);
+       $success= $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 
 ?>
 
 
 
-
-
-
-
-
-function updateBooks($bTitle, $bGenre, $bid) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("update 'book' set 'book_title'=?, 'book_genre'= ? where book_id = ? ");
-        $stmt->bind_param("ssi", $bTitle, $bGenre, $bid);
-       $success= $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $success;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
-
-function deleteBooks($bid) {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from book where book_id=?");
-        $stmt->bind_param("i", $bid);
-       $success= $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $success;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
 
 
 
