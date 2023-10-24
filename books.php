@@ -12,7 +12,7 @@ if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']){
 
   case "Add":
-  if (insertBook($_POST['bTitle'], $_POST['bGenre'])) {
+  if (insertBooks($_POST['bTitle'], $_POST['bGenre'])) {
       echo '<div class="alert alert-success" role="alert">Book added.</div>';
   } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
