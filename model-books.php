@@ -16,8 +16,8 @@ function selectBooks() {
 function insertBooks($bTitle, $bGenre) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `book` (`book_title`, `book_genre`) VALUES ( ?, ?)");
-        $stmt->bind_param("ss", $bTitle, $bGenre);
+        $stmt = $conn->prepare("INSERT INTO `book` (`book_title`, `book_genre`, 'publisher_id') VALUES ( ?, ?, ?)");
+        $stmt->bind_param("ssi", $bTitle, $bGenre, $pid);
        $success= $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
