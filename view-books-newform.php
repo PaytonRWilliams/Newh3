@@ -26,7 +26,7 @@
         
         </div>
         <div class="mb-3">
-          <label for="bTitle" class="form-label">Book Title</label>
+          <label for="bTitle" class="form-label">Book Genre</label>
           <input type="text" class="form-control" id="bGenre" name= "bGenre">
         
         </div>
