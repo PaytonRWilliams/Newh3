@@ -45,7 +45,7 @@ function updateBooks($bTitle, $bGenre, $bid) {
 function deleteBooks($bid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from book where book_id=?");
+        $stmt = $conn->prepare("delete from `book` where book_id=?");
         $stmt->bind_param("i", $bid);
        $success= $stmt->execute();
         $result = $stmt->get_result();
