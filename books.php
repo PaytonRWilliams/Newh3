@@ -11,7 +11,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']){
 
-  case "Add";
+  case "Add":
   if (insertBook($_POST['bTitle'], $_POST['bGenre'])) {
       echo '<div class="alert alert-success" role="alert">Book added.</div>';
   } else {
