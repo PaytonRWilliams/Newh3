@@ -36,14 +36,14 @@ include "view-authors-newform.php";
     </thead>
     <tbody>
 <?php
-while ($book= $books->fetch_assoc()) {
+while ($author= $authors->fetch_assoc()) {
 
 ?>
  <tr>
 
-    <td> <?php echo $book['author_id']; ?></td>
-    <td><?php echo $book['author_name']; ?></td>
-    <td><?php echo $book['author_gender']; ?></td>
+    <td> <?php echo $author['author_id']; ?></td>
+    <td><?php echo $author['author_name']; ?></td>
+    <td><?php echo $author['author_gender']; ?></td>
    <td>
    </td>
    <td>
