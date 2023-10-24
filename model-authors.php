@@ -19,7 +19,8 @@ function insertAuthors($aName, $aGender) {
    try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `author` (`author_name`, `author_gender`) VALUES (?, ?)");
-        $stmt->execute();
+        $stmt->bind_param("ss", $aName, $aGender);
+        $success = $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
         return $result;
@@ -29,19 +30,15 @@ function insertAuthors($aName, $aGender) {
     }
 }
 
-?>
 
 
-
-
-
-
-function insertBooks($bTitle, $bGenre, $pid) {
+function updateBooks($aName, $aGender) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `book` (`book_title`, `book_genre`, `publisher_id`) VALUES (?, ?, ?)");
-        $stmt->bind_param("ssi", $bTitle, $bGenre, $pid);
-        $success = $stmt->execute();
+        $stmt = $conn->prepare("update 'author' set 'author_name'=?, 'author_gender'= ? where book_id = ? ");
+        $stmt->bind_param("ss", $aName, $aGender);
+       $success= $stmt->execute();
+        $result = $stmt->get_result();
         $conn->close();
         return $success;
     } catch (Exception $e) {
@@ -49,6 +46,18 @@ function insertBooks($bTitle, $bGenre, $pid) {
         throw $e;
     }
 }
+
+
+
+
+?>
+
+
+
+
+
+
+
 
 function updateBooks($bTitle, $bGenre, $bid) {
     try {
