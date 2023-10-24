@@ -30,6 +30,16 @@
           <input type="text" class="form-control" id="bGenre" name= "bGenre">
         
         </div>
+
+           <div class="mb-3">
+          <label for="pid" class="form-label">publisher id</label>
+          <input type="int" class="form-control" id="pid" name= "pid">
+        
+        </div>
+
+
+
+         
                 <input type="hidden" name= "actionType" value = "Add">
          
         <button type="submit" class="btn btn-primary">Save</button>
