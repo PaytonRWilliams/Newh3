@@ -13,13 +13,12 @@ function selectBooks() {
     }
 }
 
-function insertBooks($bTitle, $bGenre) {
+function insertBooks($bTitle, $bGenre, $pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `book` (`book_title`, `book_genre`, 'publisher_id') VALUES ( ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `book` (`book_title`, `book_genre`, `publisher_id`) VALUES (?, ?, ?)");
         $stmt->bind_param("ssi", $bTitle, $bGenre, $pid);
-       $success= $stmt->execute();
-        $result = $stmt->get_result();
+        $success = $stmt->execute();
         $conn->close();
         return $success;
     } catch (Exception $e) {
@@ -27,6 +26,7 @@ function insertBooks($bTitle, $bGenre) {
         throw $e;
     }
 }
+
 function updateBooks($bTitle, $bGenre, $bid) {
     try {
         $conn = get_db_connection();
