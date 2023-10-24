@@ -14,7 +14,7 @@ if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']){
 
   case "Add":
-  if (insertAuthors(            ) {
+  if (insertAuthors($_POST['aName'], $_POST['aGender'])) {
       echo '<div class="alert alert-success" role="alert">Author added.</div>';
   } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
@@ -22,13 +22,12 @@ if (isset($_POST['actionType'])) {
   break;
 
  case "Delete":
-  if (deleteAuthors($_POST['          '])) {
+  if (deleteAuthors($_POST['aid'])) {
       echo '<div class="alert alert-success" role="alert">Author deleted.</div>';
   } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
   }
   break;
-
         
 
   }
