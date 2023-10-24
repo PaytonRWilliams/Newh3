@@ -46,6 +46,19 @@ while ($book= $books->fetch_assoc()) {
     <td><?php echo $book['book_title']; ?></td>
     <td><?php echo $book['book_genre']; ?></td>
    <td>
+
+
+         <?php
+include "view-books-editform.php";
+?>
+
+
+
+
+
+
+
+     
    </td>
    <td>
      <form method = "post" action="">
