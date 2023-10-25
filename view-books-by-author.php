@@ -27,12 +27,12 @@ while ($author = $authors->fetch_assoc()) {
         <?php echo $book['book_title']; ?> - <?php echo $book['book_genre']; ?> - <?php echo $book['publisher_id']; ?> 
       <div class="col-auto">
 <?php
-include "view-books-by-authors-editform.php";
+include "view-books-by-author-editform.php";
 ?>
       </div>
       <div class="col-auto">
         <form method="post" action="">
-          <input type="hidden" name="pid" value="<?php echo $book['publisher_id']; ?>">
+          <input type="hidden" name="baid" value="<?php echo $book['book_author_id']; ?>">
           <input type="hidden" name="actionType" value="Delete">
           <button type="submit" class="btn" onclick="return confirm('Are you sure?');">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
