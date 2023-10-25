@@ -61,7 +61,7 @@ function insertBook_Author($aid, $bid, $position) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `book_author` (`author_id`, `book_id`, `position`) VALUES (?, ?, ?)");
-        $stmt->bind_param("iis", $aid, $bid, $position;
+        $stmt->bind_param("iis", $aid, $bid, $position);
         $success = $stmt->execute();
         $conn->close();
         return $success;
