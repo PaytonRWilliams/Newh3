@@ -35,7 +35,7 @@ function insertPublishers($pName, $pCity) {
 function updatePublishers($pName, $pCity, $pid) {
     try {
         $conn = get_db_connection();
-       $stmt = $conn->prepare("UPDATE `publisher` SET `publisher_name`=?, `publisher_city`=? WHERE publisher_id = ?");
+       $stmt = $conn->prepare("UPDATE `publisher` SET `publisher_name`=?, `publisher_city`=? WHERE `publisher_id` = ?");
         $stmt->bind_param("ssi", $pName, $pCity, $pid);
        $success= $stmt->execute();
         $result = $stmt->get_result();
