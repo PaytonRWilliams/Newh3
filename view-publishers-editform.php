@@ -18,7 +18,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editAuthorModal<?php echo $publisher['publisher_id']; ?>" tabindex="-1" aria-labelledby="editPublisherModalLabel<?php echo $publisher['publisher_id']; ?>" aria-hidden="true">
+<div class="modal fade" id="editPublishermodal<?php echo $publisher['publisher_id']; ?>" tabindex="-1" aria-labelledby="editPublisherModalLabel<?php echo $publisher['publisher_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
