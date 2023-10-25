@@ -40,8 +40,8 @@
         </div>
 
            <div class="mb-3">
-          <label for="pid" class="form-label">publisher id</label>
-          <input type="int" class="form-control" id="pid" name= "pid">
+          <label for="pid<?php echo $book['book_id']; ?>" class="form-label">publisher id</label>
+          <input type="int" class="form-control" id="pid<?php echo $book['book_id']; ?>" name= "pid" value="<?php echo $book['publisher_id']; ?>">
         
         </div>
 
