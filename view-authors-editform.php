@@ -18,11 +18,11 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editAuthorModal<?php echo $book['Author_id']; ?>" tabindex="-1" aria-labelledby="editAuthorModalLabel<?php echo $author['author_id']; ?>" aria-hidden="true">
+<div class="modal fade" id="editAuthorModal<?php echo $author['Author_id']; ?>" tabindex="-1" aria-labelledby="editAuthorModalLabel<?php echo $author['author_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editAuthorModalLabel<?php echo $book['book_id']; ?>">Edit Author</h1>
+        <h1 class="modal-title fs-5" id="editAuthorModalLabel<?php echo $author['author_id']; ?>">Edit Author</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -42,7 +42,7 @@
          
 
 
-                  <input type="hidden" name= "bid" value="<?php echo $book['book_id']; ?>">
+                  <input type="hidden" name= "aid" value="<?php echo $author['author_id']; ?>">
         
                 <input type="hidden" name= "actionType" value = "Edit">
          
