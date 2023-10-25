@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editBookModal<?php echo $book['book_id']; ?>">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editAuthorModal<?php echo $author['author_id']; ?>">
 
 
 
