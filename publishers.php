@@ -56,7 +56,7 @@ case "Edit":
 
 
 
-$authors = selectPublishers();
+$publishers = selectPublishers();
 include "view-publishers.php";
 include "view-footer.php";
 ?>
