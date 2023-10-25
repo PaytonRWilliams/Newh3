@@ -56,7 +56,7 @@
           </ul>
         </p>
          <p class="card-text"><small class="text-body-secondary">Gender: <?php echo $author['author_gender']; ?> </small></p>
-    </div>
+    
       </div>
     </div>
   <?php
