@@ -34,7 +34,7 @@ case "Edit":
 
         
  case "Delete":
-  if (deleteAuthors($_POST['pid'])) {
+  if (deletePublishers($_POST['pid'])) {
       echo '<div class="alert alert-success" role="alert">Publisher deleted.</div>';
   } else {
       echo '<div class="alert alert-danger" role="alert">Error.</div>';
