@@ -31,7 +31,7 @@ FROM `book` b join book_author ba ON ba.book_id=b.book_id WHERE ba.author_id=? "
     }
 }
 
-function selectInstructorsForInput() {
+function selectAuthorsForInput() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT author_id, author_name FROM `author` order by author_name");
