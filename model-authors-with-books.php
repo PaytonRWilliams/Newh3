@@ -74,7 +74,8 @@ function insertBook_Author($aid, $bid, $position) {
 function updateBook_Author($aid, $bid, $position, $baid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `book_author` set `author_id` = ?, `book_id` = ?, `position` = ? `where book_author_id = ?");
+       $stmt = $conn->prepare("update `book_author` set `author_id` = ?, `book_id` = ?, `position` = ? WHERE `book_author_id` = ?");
+
         $stmt->bind_param("iisi", $aid, $bid, $position, $baid);
         $success = $stmt->execute();
         $conn->close();
