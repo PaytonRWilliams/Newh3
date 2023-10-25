@@ -35,8 +35,9 @@ function insertPublishers($pName, $pCity) {
 function updatePublishers($pName, $pCity) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update 'publisher' set 'publisher_name'=?, 'publisher_city'= ? where book_id = ? ");
-        $stmt->bind_param("ss", $pName, $pCity);
+       $stmt = $conn->prepare("UPDATE `publisher` SET `publisher_name`=?, `publisher_city`=? WHERE book_id = ?");
+
+        $stmt->bind_param("ssi", $pName, $pCity, $bid);
        $success= $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -53,7 +54,7 @@ function deletePublishers($pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from publisher where publisher_id=?");
-        $stmt->bind_param("i", $pid);
+       $stmt->bind_param("i", $pid);
        $success= $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
