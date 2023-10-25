@@ -19,8 +19,8 @@
           <div class="mb-3">
             <label for="iid" class="form-label">Author</label>
 <?php
-$AuthorList = selectAuthorsForInput();
-$selectedInstructor = 0;
+$authorList = selectAuthorsForInput();
+$selectedAuthors = 0;
 include "view-author-input-list.php";
 ?>
           </div>
