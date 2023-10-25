@@ -16,7 +16,7 @@ function selectAuthors() {
 function selectBooksByAuthor($aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT  b.book_id, book_title, book_genre, position, book_author_id
+        $stmt = $conn->prepare("SELECT  b.book_id, book_title, book_genre, position, book_author_id, author_id
 FROM `book` b join book_author ba ON ba.book_id=b.book_id WHERE ba.author_id=? ");
         $stmt->bind_param("i", $aid);
         $stmt->execute();
