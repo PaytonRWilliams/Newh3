@@ -32,11 +32,10 @@ function insertPublishers($pName, $pCity) {
 
 
 
-function updatePublishers($pName, $pCity) {
+function updatePublishers($pName, $pCity, $bid) {
     try {
         $conn = get_db_connection();
        $stmt = $conn->prepare("UPDATE `publisher` SET `publisher_name`=?, `publisher_city`=? WHERE book_id = ?");
-
         $stmt->bind_param("ssi", $pName, $pCity, $bid);
        $success= $stmt->execute();
         $result = $stmt->get_result();
