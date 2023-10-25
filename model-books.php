@@ -30,10 +30,9 @@ function insertBooks($bTitle, $bGenre, $pid) {
 function updateBooks($bTitle, $bGenre, $bid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update 'book' set 'book_title'=?, 'book_genre'= ? where book_id = ? ");
+        $stmt = $conn->prepare("UPDATE `book` SET `book_title`=?, `book_genre`=? WHERE `book_id` = ?");
         $stmt->bind_param("ssi", $bTitle, $bGenre, $bid);
-       $success= $stmt->execute();
-        $result = $stmt->get_result();
+        $success = $stmt->execute();
         $conn->close();
         return $success;
     } catch (Exception $e) {
@@ -41,6 +40,7 @@ function updateBooks($bTitle, $bGenre, $bid) {
         throw $e;
     }
 }
+
 
 function deleteBooks($bid) {
     try {
