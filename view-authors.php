@@ -45,6 +45,16 @@ while ($author= $authors->fetch_assoc()) {
     <td><?php echo $author['author_name']; ?></td>
     <td><?php echo $author['author_gender']; ?></td>
    <td>
+
+         <?php
+include "view-authors-editform.php";
+?>
+
+
+
+
+
+     
    </td>
    <td>
      <form method = "post" action="">
