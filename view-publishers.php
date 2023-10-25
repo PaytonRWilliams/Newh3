@@ -36,7 +36,7 @@ include "view-publishers-newform.php";
     </thead>
     <tbody>
 <?php
-while ($publisher= $publishers->fetch_assoc()) {
+while ($publisher = $publishers->fetch_assoc()) {
 
 ?>
  <tr>
