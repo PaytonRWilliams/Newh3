@@ -32,7 +32,7 @@ function insertAuthors($aName, $aGender) {
 
 
 
-function updateBooks($aName, $aGender) {
+function updateAuthors($aName, $aGender) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update 'author' set 'author_name'=?, 'author_gender'= ? where book_id = ? ");
@@ -49,7 +49,7 @@ function updateBooks($aName, $aGender) {
 
 
 
-function deleteBooks($aid) {
+function deleteAuthors($aid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from author where author_id=?");
