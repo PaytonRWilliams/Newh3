@@ -32,11 +32,11 @@ function insertAuthors($aName, $aGender) {
 
 
 
-function updateAuthors($aName, $aGender) {
+function updateAuthors($aName, $aGender, $aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update 'author' set 'author_name'=?, 'author_gender'= ? where book_id = ? ");
-        $stmt->bind_param("ss", $aName, $aGender);
+        $stmt = $conn->prepare("UPDATE `author` SET `author_name` = ?, `author_gender` = ? WHERE `author_id` = ?");
+        $stmt->bind_param("ss", $aName, $aGender, $aid);
        $success= $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
