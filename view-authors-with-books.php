@@ -55,7 +55,7 @@
             ?>
           </ul>
         </p>
-        <p class="card-text"><small class="text-muted">Office: <?php echo $author['office']; ?></small></p>
+        <p class="card-text"><small class="text-muted">Position: <?php echo $author['position']; ?></small></p>
       </div>
     </div>
   <?php
