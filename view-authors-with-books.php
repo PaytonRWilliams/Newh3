@@ -29,7 +29,7 @@
               <li class="list-group-item">
                 <div class="row">
                   <div class="col">
-                    <?php echo $book['book_title']; ?> - <?php echo $book['book_genre']; ?> - <?php echo $book['publisher_id']; ?>
+                    <?php echo $book['book_title']; ?> - <?php echo $book['book_genre']; ?>
                   </div>
                   <div class="col-auto">
                     <?php
