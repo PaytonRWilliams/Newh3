@@ -39,7 +39,11 @@
         
         </div>
 
-         
+          <div class="mb-3">
+          <label for="pid" class="form-label">publisher id</label>
+          <input type="number" class="form-control" id="pid" name= "pid">
+        
+        </div>
 
 
                   <input type="hidden" name= "bid" value="<?php echo $book['book_id']; ?>">
