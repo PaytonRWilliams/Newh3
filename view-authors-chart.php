@@ -1,7 +1,9 @@
 <h1>Authors chart</h1>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   const ctx = document.getElementById('myChart');
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   new Chart(ctx, {
     type: 'bar',
     data: {
