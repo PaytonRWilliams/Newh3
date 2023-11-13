@@ -1,5 +1,8 @@
 <h1>publisher chart</h1>
+
+
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<div id="chart"></div>
 
   <script>
         var options = {
