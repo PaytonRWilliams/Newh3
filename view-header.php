@@ -40,6 +40,10 @@
         <li class="nav-item">
           <a class="nav-link" href="authors-chart.php">Author Chart </a>
         </li>
+
+         <li class="nav-item">
+          <a class="nav-link" href="book-chart.php">Book Chart </a>
+        </li>
         
      
       </ul>
