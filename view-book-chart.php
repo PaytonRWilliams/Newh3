@@ -1,29 +1,20 @@
-<h1>Authors chart</h1>
-<div>
-  <canvas id="myChart"></canvas>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<h1>Book chart</h1>
 
 
 
-<script>
-  const ctx = document.getElementById('myChart');
 
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-    datasets: [{
-        data: [10, 20, 30]
-    }],
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        'Red',
-        'Yellow',
-        'Blue'
-    ]
-},
-   
-  });
-</script>
+<p>
+    Here's a simple Plotly plot - 
+    <a href="https://bit.ly/1Or9igj">plotly.js documentation</a>
+</p>
+
+<!-- Plots go in blank <div> elements. 
+    You can size them in the plot layout,
+    or give the div a size as shown here.
+-->
+<div id="tester" style="width:90%;height:250px;"></div>
