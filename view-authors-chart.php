@@ -5,7 +5,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<?php
+
 
 <script>
   const ctx = document.getElementById('myChart');
